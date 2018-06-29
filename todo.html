@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Praca z elementami </title>
+</head>
+
+<script type="text/javascript">
+// var my_div = null;
+// var newDiv = null;
+
+function addNote() {
+  var note = document.getElementById('note').value;
+  newDiv = document.createElement("div");
+  newDiv.innerHTML = "<p>" + note + "</p>";
+  addedDiv = document.getElementById("toDoHeader");
+  document.body.insertBefore(newDiv, addedDiv);
+}
+
+</script>
+
+<input type="text" id= "note">
+<button onclick= "addNote()">Dodaj Taska </button>
+<h1 id = "toDoHeader">To do list</h1>
+
+</body>
+</html>
