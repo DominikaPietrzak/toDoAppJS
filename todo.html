@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title> Praca z elementami </title>
-</head>
+  <head>
+    <title> Praca z elementami </title>
+  </head>
 
-<script type="text/javascript">
-// var my_div = null;
-// var newDiv = null;
+  <script type="text/javascript">
+  // var my_div = null;
+  // var newDiv = null;
+    function addNote() {
+      var note = document.getElementById('note').value;
+      newDiv = document.createElement("div");
+      var newCheckBox = document.createElement("INPUT");
+      newCheckBox.setAttribute("type", "checkbox");
+      newDiv.innerHTML = "<p>" + note + "</p>" + "";
+      addedDiv = document.getElementById("node");
+      document.body.insertBefore(newDiv, addedDiv);
+      document.body.appendChild(checkBox);
+    }
+  </script>
 
-function addNote() {
-  var note = document.getElementById('note').value;
-  newDiv = document.createElement("div");
-  newDiv.innerHTML = "<p>" + note + "</p>";
-  addedDiv = document.getElementById("node");
-  document.body.insertBefore(newDiv, addedDiv);
-}
-
-</script>
-
-<input type="text" id= "note">
-<button onclick= "addNote()">Dodaj Taska </button>
-<h1 id = "toDoHeader">To do list</h1>
-<span id= "node"></span>
+  <input type="text" id= "note">
+  <button onclick= "addNote()">Dodaj Taska </button>
+  <h1 id = "toDoHeader">To do list</h1>
+  <span id= "node"></span>
 </body>
 </html>
